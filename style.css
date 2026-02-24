@@ -1,0 +1,1155 @@
+/* Reset và thiết lập cơ bản */
+* {
+  /* Chọn tất cả các phần tử */
+  margin: 0;
+  /* Xóa margin mặc định */
+  padding: 0;
+  /* Xóa padding mặc định */
+  box-sizing: border-box;
+  /* Bao gồm padding và border trong width/height */
+}
+
+body {
+  /* Style cho toàn bộ trang */
+  font-family: "Arial", sans-serif;
+  /* Font chữ chính */
+  line-height: 1.6;
+  /* Khoảng cách dòng */
+  color: #333;
+  /* Màu chữ chính */
+  background-color: #f4f4f4;
+  /* Màu nền */
+}
+
+/* Header và Navigation */
+header {
+  /* Style cho header */
+  background-color: #2c3e50;
+  /* Màu nền header */
+  color: white;
+  /* Màu chữ header */
+  padding: 1rem 0;
+  /* Padding trên dưới 1rem */
+  position: fixed;
+  /* Cố định header ở trên cùng */
+  top: 0;
+  /* Vị trí từ đỉnh */
+  width: 100%;
+  /* Chiều rộng 100% */
+  z-index: 1000;
+  /* Độ ưu tiên hiển thị */
+}
+
+nav {
+  /* Style cho thanh điều hướng */
+  display: flex;
+  /* Sử dụng flexbox */
+  justify-content: space-between;
+  /* Căn đều các phần tử */
+  align-items: center;
+  /* Căn giữa theo chiều dọc */
+  max-width: 1200px;
+  /* Chiều rộng tối đa */
+  margin: 0 auto;
+  /* Căn giữa */
+  padding: 0 2rem;
+  /* Padding trái phải */
+}
+
+.logo h1 {
+  /* Style cho logo */
+  font-size: 1.5rem;
+  /* Kích thước font */
+}
+
+.menu {
+  /* Style cho menu */
+  display: flex;
+  /* Sử dụng flexbox */
+  list-style: none;
+  /* Xóa dấu chấm đầu dòng */
+}
+
+.menu li {
+  /* Style cho từng item menu */
+  margin-left: 2rem;
+  /* Khoảng cách trái */
+}
+
+.menu a {
+  /* Style cho liên kết menu */
+  color: white;
+  /* Màu chữ */
+  text-decoration: none;
+  /* Xóa gạch chân */
+  transition: color 0.3s;
+  /* Hiệu ứng chuyển màu */
+}
+
+.menu a:hover {
+  /* Hiệu ứng hover cho menu */
+  color: #3498db;
+  /* Màu khi hover */
+}
+
+/* Banner */
+.banner {
+  /* Style cho banner */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=1200");
+  /* Nền gradient với hình ảnh */
+  background-size: cover;
+  /* Hình ảnh phủ toàn bộ */
+  background-position: center;
+  /* Căn giữa hình ảnh */
+  height: 100vh;
+  /* Chiều cao toàn màn hình */
+  display: flex;
+  /* Sử dụng flexbox */
+  align-items: center;
+  /* Căn giữa theo chiều dọc */
+  justify-content: center;
+  /* Căn giữa theo chiều ngang */
+  text-align: center;
+  /* Căn giữa văn bản */
+  color: white;
+  /* Màu chữ */
+  margin-top: 60px;
+  /* Khoảng cách từ header */
+}
+
+.banner-content h2 {
+  /* Style cho tiêu đề banner */
+  font-size: 3rem;
+  /* Kích thước font lớn */
+  margin-bottom: 1rem;
+  /* Khoảng cách dưới */
+}
+
+.banner-content p {
+  /* Style cho mô tả banner */
+  font-size: 1.2rem;
+  /* Kích thước font */
+  margin-bottom: 2rem;
+  /* Khoảng cách dưới */
+}
+
+.btn {
+  /* Style cho nút */
+  display: inline-block;
+  /* Hiển thị dạng block inline */
+  background-color: #3498db;
+  /* Màu nền */
+  color: white;
+  /* Màu chữ */
+  padding: 0.8rem 2rem;
+  /* Padding trong nút */
+  text-decoration: none;
+  /* Xóa gạch chân */
+  border-radius: 5px;
+  /* Bo góc */
+  transition: background-color 0.3s;
+  /* Hiệu ứng chuyển màu nền */
+}
+
+.btn:hover {
+  /* Hiệu ứng hover cho nút */
+  background-color: #2980b9;
+  /* Màu nền khi hover */
+}
+
+/* Destinations Section */
+.destinations {
+  /* Style cho phần điểm đến */
+  max-width: 1200px;
+  /* Chiều rộng tối đa */
+  margin: 4rem auto;
+  /* Căn giữa và khoảng cách */
+  padding: 0 2rem;
+  /* Padding trái phải */
+  text-align: center;
+  /* Căn giữa văn bản */
+}
+
+.destinations h2 {
+  /* Style cho tiêu đề phần điểm đến */
+  font-size: 2.5rem;
+  /* Kích thước font */
+  margin-bottom: 2rem;
+  /* Khoảng cách dưới */
+  color: #2c3e50;
+  /* Màu chữ */
+}
+
+.destination-grid {
+  /* Style cho lưới điểm đến */
+  display: grid;
+  /* Sử dụng grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Tự động chia cột */
+  gap: 2rem;
+  /* Khoảng cách giữa các item */
+}
+
+.destination-card {
+  /* Style cho card điểm đến */
+  background-color: white;
+  /* Màu nền trắng */
+  border-radius: 10px;
+  /* Bo góc */
+  overflow: hidden;
+  /* Ẩn phần thừa */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Đổ bóng */
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  /* Hiệu ứng chuyển đổi */
+}
+
+.destination-card:hover {
+  /* Hiệu ứng hover cho card */
+  transform: translateY(-10px);
+  /* Di chuyển lên trên */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Tăng đổ bóng */
+}
+
+.destination-card img {
+  /* Style cho hình ảnh trong card */
+  width: 100%;
+  /* Chiều rộng 100% */
+  height: 200px;
+  /* Chiều cao cố định */
+  object-fit: cover;
+  /* Cắt hình ảnh vừa khung */
+}
+
+.card-content {
+  /* Style cho nội dung card */
+  padding: 1.5rem;
+  /* Padding trong */
+}
+
+.card-content h3 {
+  /* Style cho tiêu đề card */
+  font-size: 1.3rem;
+  /* Kích thước font */
+  margin-bottom: 0.5rem;
+  /* Khoảng cách dưới */
+  color: #2c3e50;
+  /* Màu chữ */
+}
+
+.card-content p {
+  /* Style cho mô tả card */
+  color: #666;
+  /* Màu chữ xám */
+  line-height: 1.5;
+  /* Khoảng cách dòng */
+}
+
+/* Footer */
+footer {
+  /* Style cho footer */
+  background-color: #2c3e50;
+  /* Màu nền */
+  color: white;
+  /* Màu chữ */
+  text-align: center;
+  /* Căn giữa văn bản */
+  padding: 2rem 0;
+  /* Padding trên dưới */
+  margin-top: 4rem;
+  /* Khoảng cách từ trên */
+}
+
+/* Regions Page Styles */
+.banner-regions {
+  /* Style đặc biệt cho banner vùng miền */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200");
+  /* Hình nền khác cho vùng miền */
+}
+
+.regions-content {
+  /* Style cho nội dung vùng miền */
+  padding: 4rem 0;
+  /* Padding trên dưới */
+}
+
+.container {
+  /* Container chính */
+  max-width: 1200px;
+  /* Chiều rộng tối đa */
+  margin: 0 auto;
+  /* Căn giữa */
+  padding: 0 2rem;
+  /* Padding trái phải */
+}
+
+.region-section {
+  /* Style cho mỗi vùng miền */
+  margin-bottom: 4rem;
+  /* Khoảng cách dưới */
+}
+
+.region-section h2 {
+  /* Style cho tiêu đề vùng miền */
+  font-size: 2.5rem;
+  /* Kích thước font */
+  color: #2c3e50;
+  /* Màu chữ */
+  text-align: center;
+  /* Căn giữa */
+  margin-bottom: 2rem;
+  /* Khoảng cách dưới */
+}
+
+.region-content {
+  /* Style cho nội dung vùng miền */
+  display: grid;
+  /* Sử dụng grid */
+  grid-template-columns: 1fr 1fr;
+  /* 2 cột bằng nhau */
+  gap: 3rem;
+  /* Khoảng cách giữa cột */
+  align-items: center;
+  /* Căn giữa theo chiều dọc */
+  margin-bottom: 3rem;
+  /* Khoảng cách dưới */
+}
+
+.region-image {
+  /* Style cho hình ảnh vùng miền */
+  border-radius: 10px;
+  /* Bo góc */
+  overflow: hidden;
+  /* Ẩn phần thừa */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Đổ bóng */
+}
+
+.region-image img {
+  /* Style cho hình ảnh trong vùng miền */
+  width: 100%;
+  /* Chiều rộng 100% */
+  height: 300px;
+  /* Chiều cao cố định */
+  object-fit: cover;
+  /* Cắt hình ảnh vừa khung */
+  transition: transform 0.3s;
+  /* Hiệu ứng chuyển đổi */
+}
+
+.region-image img:hover {
+  /* Hiệu ứng hover cho hình ảnh */
+  transform: scale(1.05);
+  /* Phóng to hình ảnh */
+}
+
+.region-info h3 {
+  /* Style cho tiêu đề đặc điểm */
+  font-size: 1.5rem;
+  /* Kích thước font */
+  color: #2c3e50;
+  /* Màu chữ */
+  margin-bottom: 1rem;
+  /* Khoảng cách dưới */
+}
+
+.region-info ul {
+  /* Style cho danh sách */
+  list-style-position: inside;
+  /* Dấu chấm ở trong */
+  margin-bottom: 1.5rem;
+  /* Khoảng cách dưới */
+}
+
+.region-info li {
+  /* Style cho item trong danh sách */
+  margin-bottom: 0.5rem;
+  /* Khoảng cách dưới */
+  line-height: 1.6;
+  /* Khoảng cách dòng */
+}
+
+.region-info p {
+  /* Style cho đoạn mô tả */
+  font-size: 1.1rem;
+  /* Kích thước font */
+  line-height: 1.7;
+  /* Khoảng cách dòng */
+  color: #555;
+  /* Màu chữ */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Media query cho màn hình nhỏ */
+  nav {
+    /* Điều chỉnh nav cho mobile */
+    flex-direction: column;
+    /* Sắp xếp dọc */
+    padding: 1rem;
+    /* Giảm padding */
+  }
+
+  .menu {
+    /* Điều chỉnh menu cho mobile */
+    margin-top: 1rem;
+    /* Khoảng cách trên */
+  }
+
+  .menu li {
+    /* Điều chỉnh item menu cho mobile */
+    margin-left: 1rem;
+    /* Giảm khoảng cách */
+  }
+
+  .banner-content h2 {
+    /* Điều chỉnh tiêu đề banner cho mobile */
+    font-size: 2rem;
+    /* Giảm kích thước font */
+  }
+
+  .destination-grid {
+    /* Điều chỉnh grid cho mobile */
+    grid-template-columns: 1fr;
+    /* 1 cột */
+    gap: 1rem;
+    /* Giảm khoảng cách */
+  }
+
+  .region-content {
+    /* Điều chỉnh layout vùng miền cho mobile */
+    grid-template-columns: 1fr;
+    /* 1 cột */
+    gap: 1.5rem;
+    /* Giảm khoảng cách */
+  }
+
+  .region-section h2 {
+    /* Điều chỉnh tiêu đề vùng miền cho mobile */
+    font-size: 2rem;
+    /* Giảm kích thước font */
+  }
+}
+
+/* Food Page Styles */
+.banner-food {
+  /* Style đặc biệt cho banner ẩm thực */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images.html/amthucvietnam.jpg);
+  /* Hình nền ẩm thực */
+}
+
+.food-content {
+  /* Style cho nội dung ẩm thực */
+  padding: 4rem 0;
+  /* Padding trên dưới */
+}
+
+.food-content h2 {
+  /* Style cho tiêu đề chính */
+  font-size: 2.5rem;
+  /* Kích thước font */
+  color: #2c3e50;
+  /* Màu chữ */
+  text-align: center;
+  /* Căn giữa */
+  margin-bottom: 3rem;
+  /* Khoảng cách dưới */
+}
+
+.region-food {
+  /* Style cho mỗi vùng ẩm thực */
+  margin-bottom: 4rem;
+  /* Khoảng cách dưới */
+}
+
+.region-food h3 {
+  /* Style cho tiêu đề vùng */
+  font-size: 2rem;
+  /* Kích thước font */
+  color: #e74c3c;
+  /* Màu đỏ */
+  margin-bottom: 2rem;
+  /* Khoảng cách dưới */
+  text-align: center;
+  /* Căn giữa */
+  border-bottom: 2px solid #e74c3c;
+  /* Đường kẻ dưới */
+  padding-bottom: 0.5rem;
+  /* Padding dưới */
+}
+
+.food-table {
+  /* Style cho bảng món ăn */
+  display: grid;
+  /* Sử dụng grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Tự động chia cột */
+  gap: 2rem;
+  /* Khoảng cách giữa item */
+  margin-bottom: 2rem;
+  /* Khoảng cách dưới */
+}
+
+.food-item {
+  /* Style cho mỗi item món ăn */
+  background-color: white;
+  /* Màu nền trắng */
+  border-radius: 10px;
+  /* Bo góc */
+  overflow: hidden;
+  /* Ẩn phần thừa */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Đổ bóng */
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  /* Hiệu ứng chuyển đổi */
+}
+
+.food-item:hover {
+  /* Hiệu ứng hover cho item */
+  transform: translateY(-5px);
+  /* Di chuyển lên trên */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Tăng đổ bóng */
+}
+
+.food-item img {
+  /* Style cho hình ảnh món ăn */
+  width: 100%;
+  /* Chiều rộng 100% */
+  height: 200px;
+  /* Chiều cao cố định */
+  object-fit: cover;
+  /* Cắt hình ảnh vừa khung */
+}
+
+.food-info {
+  /* Style cho thông tin món ăn */
+  padding: 1.5rem;
+  /* Padding trong */
+}
+
+.food-info h4 {
+  /* Style cho tên món ăn */
+  font-size: 1.3rem;
+  /* Kích thước font */
+  color: #2c3e50;
+  /* Màu chữ */
+  margin-bottom: 0.5rem;
+  /* Khoảng cách dưới */
+}
+
+.food-info p {
+  /* Style cho mô tả món ăn */
+  color: #666;
+  /* Màu chữ xám */
+  line-height: 1.5;
+  /* Khoảng cách dòng */
+}
+
+/* Itinerary Page Styles */
+.banner-itinerary {
+  /* Style đặc biệt cho banner lịch trình */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images.html/vn.png);
+  /* Hình nền lịch trình */
+}
+
+.itinerary-content {
+  /* Style cho nội dung lịch trình */
+  padding: 4rem 0;
+  /* Padding trên dưới */
+}
+
+.itinerary-content h2 {
+  /* Style cho tiêu đề chính */
+  font-size: 2.5rem;
+  /* Kích thước font */
+  color: #2c3e50;
+  /* Màu chữ */
+  text-align: center;
+  /* Căn giữa */
+  margin-bottom: 3rem;
+  /* Khoảng cách dưới */
+}
+
+.tour-grid {
+  /* Style cho lưới tour */
+  display: grid;
+  /* Sử dụng grid */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* Tự động chia cột */
+  gap: 2rem;
+  /* Khoảng cách giữa item */
+}
+
+.tour-card {
+  /* Style cho card tour */
+  background-color: white;
+  /* Màu nền trắng */
+  border-radius: 15px;
+  /* Bo góc lớn */
+  overflow: hidden;
+  /* Ẩn phần thừa */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  /* Đổ bóng */
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  /* Hiệu ứng chuyển đổi */
+}
+
+.tour-card:hover {
+  /* Hiệu ứng hover cho card tour */
+  transform: translateY(-10px);
+  /* Di chuyển lên trên */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  /* Tăng đổ bóng */
+}
+
+.tour-image {
+  /* Style cho hình ảnh tour */
+  height: 250px;
+  /* Chiều cao cố định */
+  overflow: hidden;
+  /* Ẩn phần thừa */
+}
+
+.tour-image img {
+  /* Style cho hình ảnh trong tour */
+  width: 100%;
+  /* Chiều rộng 100% */
+  height: 100%;
+  /* Chiều cao 100% */
+  object-fit: cover;
+  /* Cắt hình ảnh vừa khung */
+  transition: transform 0.3s;
+  /* Hiệu ứng chuyển đổi */
+}
+
+.tour-card:hover .tour-image img {
+  /* Hiệu ứng hover cho hình ảnh */
+  transform: scale(1.1);
+  /* Phóng to hình ảnh */
+}
+
+.tour-info {
+  /* Style cho thông tin tour */
+  padding: 1.5rem;
+  /* Padding trong */
+}
+
+.tour-info h3 {
+  /* Style cho tên tour */
+  font-size: 1.4rem;
+  /* Kích thước font */
+  color: #2c3e50;
+  /* Màu chữ */
+  margin-bottom: 1rem;
+  /* Khoảng cách dưới */
+  line-height: 1.4;
+  /* Khoảng cách dòng */
+}
+
+.tour-details {
+  /* Style cho chi tiết tour */
+  display: flex;
+  /* Sử dụng flexbox */
+  justify-content: space-between;
+  /* Căn đều */
+  margin-bottom: 1rem;
+  /* Khoảng cách dưới */
+  font-size: 0.9rem;
+  /* Kích thước font nhỏ */
+}
+
+.duration,
+.price {
+  /* Style cho thời gian và giá */
+  color: #e74c3c;
+  /* Màu đỏ */
+  font-weight: bold;
+  /* In đậm */
+}
+
+.tour-itinerary {
+  /* Style cho lịch trình tour */
+  margin-bottom: 1.5rem;
+  /* Khoảng cách dưới */
+}
+
+.tour-itinerary h4 {
+  /* Style cho tiêu đề lịch trình */
+  font-size: 1.1rem;
+  /* Kích thước font */
+  color: #2c3e50;
+  /* Màu chữ */
+  margin-bottom: 0.5rem;
+  /* Khoảng cách dưới */
+}
+
+.tour-itinerary ul {
+  /* Style cho danh sách lịch trình */
+  list-style: none;
+  /* Xóa dấu chấm */
+  padding: 0;
+  /* Xóa padding */
+}
+
+.tour-itinerary li {
+  /* Style cho item lịch trình */
+  margin-bottom: 0.3rem;
+  /* Khoảng cách dưới */
+  font-size: 0.9rem;
+  /* Kích thước font nhỏ */
+  line-height: 1.4;
+  /* Khoảng cách dòng */
+  color: #555;
+  /* Màu chữ */
+}
+
+.tour-itinerary li strong {
+  /* Style cho ngày trong lịch trình */
+  color: #e74c3c;
+  /* Màu đỏ */
+}
+
+/* Booking Form Styles */
+.banner-booking {
+  /* Style đặc biệt cho banner đặt tour */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images.html/mapvn.jpg);
+  /* Hình nền đặt tour */
+}
+
+.booking-content {
+  /* Style cho nội dung đặt tour */
+  padding: 4rem 0;
+  /* Padding trên dưới */
+}
+
+.booking-form-container {
+  /* Style cho container form */
+  max-width: 800px;
+  /* Chiều rộng tối đa */
+  margin: 0 auto;
+  /* Căn giữa */
+  background-color: white;
+  /* Màu nền trắng */
+  border-radius: 15px;
+  /* Bo góc */
+  padding: 3rem;
+  /* Padding trong */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  /* Đổ bóng */
+}
+
+.booking-form-container h2 {
+  /* Style cho tiêu đề form */
+  font-size: 2rem;
+  /* Kích thước font */
+  color: #2c3e50;
+  /* Màu chữ */
+  text-align: center;
+  /* Căn giữa */
+  margin-bottom: 2rem;
+  /* Khoảng cách dưới */
+}
+
+.form-section {
+  /* Style cho mỗi phần form */
+  margin-bottom: 2rem;
+  /* Khoảng cách dưới */
+  padding-bottom: 2rem;
+  /* Padding dưới */
+  border-bottom: 1px solid #eee;
+  /* Đường kẻ dưới */
+}
+
+.form-section:last-child {
+  /* Style cho phần cuối cùng */
+  border-bottom: none;
+  /* Xóa đường kẻ dưới */
+}
+
+.form-section h3 {
+  /* Style cho tiêu đề phần */
+  font-size: 1.3rem;
+  /* Kích thước font */
+  color: #3498db;
+  /* Màu xanh */
+  margin-bottom: 1.5rem;
+  /* Khoảng cách dưới */
+}
+
+.form-row {
+  /* Style cho hàng form */
+  display: grid;
+  /* Sử dụng grid */
+  grid-template-columns: 1fr 1fr;
+  /* 2 cột bằng nhau */
+  gap: 1rem;
+  /* Khoảng cách giữa cột */
+  margin-bottom: 1rem;
+  /* Khoảng cách dưới */
+}
+
+.form-group {
+  /* Style cho nhóm form */
+  margin-bottom: 1rem;
+  /* Khoảng cách dưới */
+}
+
+.form-group label {
+  /* Style cho nhãn */
+  display: block;
+  /* Hiển thị dạng block */
+  margin-bottom: 0.5rem;
+  /* Khoảng cách dưới */
+  font-weight: bold;
+  /* In đậm */
+  color: #2c3e50;
+  /* Màu chữ */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  /* Style cho các input */
+  width: 100%;
+  /* Chiều rộng 100% */
+  padding: 0.8rem;
+  /* Padding trong */
+  border: 2px solid #ddd;
+  /* Viền */
+  border-radius: 5px;
+  /* Bo góc */
+  font-size: 1rem;
+  /* Kích thước font */
+  transition: border-color 0.3s;
+  /* Hiệu ứng chuyển màu viền */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  /* Hiệu ứng focus */
+  outline: none;
+  /* Xóa outline mặc định */
+  border-color: #3498db;
+  /* Màu viền xanh */
+}
+
+.checkbox-group {
+  /* Style cho nhóm checkbox */
+  display: flex;
+  /* Sử dụng flexbox */
+  align-items: center;
+  /* Căn giữa */
+  gap: 0.5rem;
+  /* Khoảng cách */
+}
+
+.checkbox-group input[type="checkbox"] {
+  /* Style cho checkbox */
+  width: auto;
+  /* Chiều rộng tự động */
+  margin: 0;
+  /* Xóa margin */
+}
+
+.form-actions {
+  /* Style cho nút actions */
+  display: flex;
+  /* Sử dụng flexbox */
+  gap: 1rem;
+  /* Khoảng cách */
+  justify-content: center;
+  /* Căn giữa */
+  margin-top: 2rem;
+  /* Khoảng cách trên */
+}
+
+.btn-primary {
+  /* Style cho nút chính */
+  background-color: #3498db;
+  /* Màu nền xanh */
+  color: white;
+  /* Màu chữ trắng */
+  border: none;
+  /* Xóa viền */
+  padding: 1rem 2rem;
+  /* Padding */
+  border-radius: 5px;
+  /* Bo góc */
+  cursor: pointer;
+  /* Con trỏ tay */
+  font-size: 1rem;
+  /* Kích thước font */
+  transition: background-color 0.3s;
+  /* Hiệu ứng chuyển màu */
+}
+
+.btn-primary:hover {
+  /* Hiệu ứng hover cho nút chính */
+  background-color: #2980b9;
+  /* Màu nền tối hơn */
+}
+
+.btn-secondary {
+  /* Style cho nút phụ */
+  background-color: #95a5a6;
+  /* Màu nền xám */
+  color: white;
+  /* Màu chữ trắng */
+  border: none;
+  /* Xóa viền */
+  padding: 1rem 2rem;
+  /* Padding */
+  border-radius: 5px;
+  /* Bo góc */
+  cursor: pointer;
+  /* Con trỏ tay */
+  font-size: 1rem;
+  /* Kích thước font */
+  transition: background-color 0.3s;
+  /* Hiệu ứng chuyển màu */
+}
+
+.btn-secondary:hover {
+  /* Hiệu ứng hover cho nút phụ */
+  background-color: #7f8c8d;
+  /* Màu nền tối hơn */
+}
+
+/* Map Section */
+.map-section {
+  /* Style cho phần bản đồ */
+  padding: 4rem 0;
+  /* Padding trên dưới */
+  background-color: #f8f9fa;
+  /* Màu nền nhạt */
+}
+
+.map-section h2 {
+  /* Style cho tiêu đề bản đồ */
+  font-size: 2rem;
+  /* Kích thước font */
+  color: #2c3e50;
+  /* Màu chữ */
+  text-align: center;
+  /* Căn giữa */
+  margin-bottom: 2rem;
+  /* Khoảng cách dưới */
+}
+
+.map-container {
+  /* Style cho container bản đồ */
+  max-width: 1000px;
+  /* Chiều rộng tối đa */
+  margin: 0 auto;
+  /* Căn giữa */
+  border-radius: 10px;
+  /* Bo góc */
+  overflow: hidden;
+  /* Ẩn phần thừa */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Đổ bóng */
+}
+
+.map-container iframe {
+  /* Style cho iframe bản đồ */
+  width: 100%;
+  /* Chiều rộng 100% */
+  height: 400px;
+  /* Chiều cao cố định */
+  border: none;
+  /* Xóa viền */
+}
+/* --- PHẦN 1: THIẾT LẬP CHUNG & BIẾN MÀU SẮC --- */
+:root {
+  --primary-color: #e67e22; /* Màu cam du lịch chuyên nghiệp */
+  --secondary-color: #2c3e50;
+  --text-color: #333;
+  --light-bg: #f4f4f4;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Font chữ hiện đại hơn */
+}
+
+body {
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-bg);
+}
+
+/* --- PHẦN 2: HEADER & MENU --- */
+header {
+  background-color: rgba(44, 62, 80, 0.95);
+  backdrop-filter: blur(5px); /* Hiệu ứng kính mờ */
+  color: var(--white);
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  margin-left: 2rem;
+}
+
+.menu a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.menu a:hover {
+  color: var(--primary-color);
+}
+
+/* --- PHẦN 3: BANNER (GIỮ NGUYÊN ẢNH TỪNG PHẦN) --- */
+.banner {
+  height: 70vh; /* Giảm chiều cao một chút để người dùng dễ thấy nội dung dưới */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  margin-top: 60px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Hiệu ứng cuộn Parallax */
+  position: relative;
+}
+
+/* Lớp phủ tối để chữ dễ đọc hơn */
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* GIỮ ẢNH GỐC CỦA BẠN CHO TỪNG TRANG */
+.banner {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=1200");
+}
+
+.banner-regions {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200") !important;
+}
+
+.banner-food {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("images.html/amthucvietnam.jpg") !important;
+}
+
+.banner-itinerary {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("images.html/vn.png") !important;
+}
+
+.banner-booking {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("images.html/mapvn.jpg") !important;
+}
+
+/* --- PHẦN 4: CÁC THÀNH PHẦN KHÁC (NÚT, CARD...) --- */
+.btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.8rem 2rem;
+  border-radius: 50px; /* Bo tròn nút cho hiện đại */
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #d35400;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+}
+
+.destination-card,
+.food-item,
+.tour-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 0;
+  margin-top: 4rem;
+}

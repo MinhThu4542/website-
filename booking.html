@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!-- Khai báo loại tài liệu HTML5 -->
+<html lang="vi">
+<!-- Ngôn ngữ của trang web là tiếng Việt -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Bộ mã hóa ký tự UTF-8 để hiển thị tiếng Việt -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Thiết lập viewport cho thiết bị di động -->
+    <title>Đặt Tour - Du Lịch Việt Nam</title>
+    <!-- Tiêu đề trang web -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Liên kết đến file CSS -->
+</head>
+
+<body>
+    <!-- Phần header với menu điều hướng -->
+    <header>
+        <nav>
+            <!-- Menu điều hướng chính -->
+            <div class="logo">
+                <h1>Du Lịch Việt Nam</h1>
+                <!-- Logo và tên website -->
+            </div>
+            <ul class="menu">
+                <!-- Danh sách menu -->
+                <li><a href="index.html">Trang Chủ</a></li>
+                <!-- Liên kết đến trang chủ -->
+                <li><a href="regions.html">Vùng Miền</a></li>
+                <!-- Liên kết đến trang vùng miền -->
+                <li><a href="food.html">Ẩm Thực</a></li>
+                <!-- Liên kết đến trang ẩm thực -->
+                <li><a href="itinerary.html">Lịch Trình</a></li>
+                <!-- Liên kết đến trang lịch trình -->
+                <li><a href="booking.html">Đặt Tour</a></li>
+                <!-- Liên kết đến trang đặt tour -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Phần banner đặt tour -->
+    <section class="banner banner-booking">
+        <div class="banner-content">
+            <h2>Đặt Tour Du Lịch</h2>
+            <!-- Tiêu đề banner -->
+            <p>Điền thông tin để nhận tư vấn và đặt tour phù hợp nhất</p>
+            <!-- Mô tả banner -->
+        </div>
+    </section>
+
+    <!-- Phần form đặt tour -->
+    <section class="booking-content">
+        <div class="container">
+            <div class="booking-form-container">
+                <!-- Container chứa form -->
+                <h2>Thông Tin Đặt Tour</h2>
+                <!-- Tiêu đề form -->
+
+                <form id="bookingForm" action="#" method="post">
+                    <!-- Form đặt tour -->
+
+                    <!-- Phần thông tin cá nhân -->
+                    <div class="form-section">
+                        <h3>1. Thông Tin Cá Nhân</h3>
+                        <!-- Tiêu đề phần -->
+
+                        <div class="form-row">
+                            <!-- Hàng form -->
+                            <div class="form-group">
+                                <label for="fullname">Họ và tên *</label>
+                                <!-- Nhãn cho input -->
+                                <input type="text" id="fullname" name="fullname" required>
+                                <!-- Input họ tên -->
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <!-- Nhãn cho input -->
+                                <input type="email" id="email" name="email" required>
+                                <!-- Input email -->
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <!-- Hàng form -->
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại *</label>
+                                <!-- Nhãn cho input -->
+                                <input type="tel" id="phone" name="phone" required>
+                                <!-- Input số điện thoại -->
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Địa chỉ</label>
+                                <!-- Nhãn cho input -->
+                                <input type="text" id="address" name="address">
+                                <!-- Input địa chỉ -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phần thông tin tour -->
+                    <div class="form-section">
+                        <h3>2. Thông Tin Tour</h3>
+                        <!-- Tiêu đề phần -->
+
+                        <div class="form-group">
+                            <label for="tourSelect">Chọn Tour *</label>
+                            <!-- Nhãn cho select -->
+                            <select id="tourSelect" name="tour" required>
+                                <!-- Select box chọn tour -->
+                                <option value="">-- Chọn tour --</option>
+                                <!-- Option mặc định -->
+                                <option value="hanoi-halong">Tour Hà Nội - Hạ Long: 4 Ngày 3 Đêm</option>
+                                <!-- Option tour 1 -->
+                                <option value="hoian-danang">Tour Hội An - Đà Nẵng: 3 Ngày 2 Đêm</option>
+
+                                <!-- Option tour 2 -->
+                                <option value="sapa-fansipan">Tour Sapa - Fansipan: 3 Ngày 2 Đêm</option>
+
+                                <!-- Option tour 3 -->
+                                <option value="hue">Tour Huế: 3 Ngày 2 Đêm</option>
+                                <!-- Option tour 4 -->
+                                <option value="other">Tour khác (liên hệ tư vấn)</option>
+                                <!-- Option tour khác -->
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <!-- Hàng form -->
+                            <div class="form-group">
+                                <label for="startDate">Ngày khởi hành *</label>
+                                <!-- Nhãn cho input -->
+                                <input type="date" id="startDate" name="startDate" required>
+                                <!-- Input ngày khởi hành -->
+                            </div>
+                            <div class="form-group">
+                                <label for="numPeople">Số người *</label>
+                                <!-- Nhãn cho input -->
+                                <input type="number" id="numPeople" name="numPeople" min="1" max="20" value="1"
+                                    required>
+                                <!-- Input số người -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phần yêu cầu đặc biệt -->
+                    <div class="form-section">
+                        <h3>3. Yêu Cầu Đặc Biệt</h3>
+                        <!-- Tiêu đề phần -->
+
+                        <div class="form-group">
+                            <label for="specialRequests">Yêu cầu đặc biệt (không bắt buộc)</label>
+                            <!-- Nhãn cho textarea -->
+                            <textarea id="specialRequests" name="specialRequests" rows="4"
+                                placeholder="Ví dụ: Chế độ ăn uống, phương tiện di chuyển, hướng dẫn viên..."></textarea>
+                            <!-- Textarea yêu cầu đặc biệt -->
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <!-- Checkbox đăng ký newsletter -->
+                            <label for="newsletter">Đăng ký nhận thông tin khuyến mãi và tour mới</label>
+                            <!-- Nhãn cho checkbox -->
+                        </div>
+                    </div>
+
+                    <!-- Nút submit -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Gửi Đơn Đặt Tour</button>
+                        <!-- Nút gửi form -->
+                        <button type="reset" class="btn btn-secondary">Làm Lại</button>
+                        <!-- Nút reset form -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần bản đồ Google Maps -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Vị Trí Văn Phòng</h2>
+            <!-- Tiêu đề bản đồ -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.3634885847714!2d106.7381845740862!3d10.679597160974243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31753abe0f63d9a9%3A0x9e842c5bcb011356!2zVHLGsOG7nW5nIFRIUFQgRMawxqFuZyBWxINuIETGsMahbmc!5e1!3m2!1svi!2s!4v1771865641629!5m2!1svi!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- Iframe Google Maps nhúng vị trí Đại học Quốc gia Hà Nội -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần footer -->
+    <footer>
+        <p>&copy; 2026 Website Du Lịch Việt Nam. Thiết kế do học sinh cấp 3.</p>
+        <!-- Thông tin bản quyền -->
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Liên kết đến file JavaScript -->
+</body>
+
+</html>
