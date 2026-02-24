@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- Khai báo loại tài liệu HTML5 -->
+<html lang="vi">
+<!-- Ngôn ngữ của trang web là tiếng Việt -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Bộ mã hóa ký tự UTF-8 để hiển thị tiếng Việt -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Thiết lập viewport cho thiết bị di động -->
+    <title>Du Lịch Việt Nam - Khám Phá Đất Nước</title>
+    <!-- Tiêu đề trang web -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Liên kết đến file CSS -->
+</head>
+
+<body>
+    <!-- Phần header với menu điều hướng -->
+    <header>
+        <nav>
+            <!-- Menu điều hướng chính -->
+            <div class="logo">
+                <h1>Du Lịch Việt Nam</h1>
+                <!-- Logo và tên website -->
+            </div>
+            <ul class="menu">
+                <!-- Danh sách menu -->
+                <li><a href="index.html">Trang Chủ</a></li>
+                <!-- Liên kết đến trang chủ -->
+                <li><a href="regions.html">Vùng Miền</a></li>
+                <!-- Liên kết đến trang vùng miền -->
+                <li><a href="food.html">Ẩm Thực</a></li>
+                <!-- Liên kết đến trang ẩm thực -->
+                <li><a href="itinerary.html">Lịch Trình</a></li>
+                <!-- Liên kết đến trang lịch trình -->
+                <li><a href="booking.html">Đặt Tour</a></li>
+                <!-- Liên kết đến trang đặt tour -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Phần banner chính -->
+    <section class="banner">
+        <div class="banner-content">
+            <h2>Khám Phá Việt Nam</h2>
+            <!-- Tiêu đề banner -->
+            <p>Đất nước hình chữ S với những cảnh đẹp tuyệt vời và nền ẩm thực phong phú</p>
+            <!-- Mô tả banner -->
+            <a href="#destinations" class="btn">Khám Phá Ngay</a>
+            <!-- Nút kêu gọi hành động -->
+        </div>
+    </section>
+
+    <!-- Phần điểm đến hot -->
+    <section id="destinations" class="destinations">
+        <h2>Điểm Đến Hot</h2>
+        <!-- Tiêu đề phần điểm đến -->
+        <div class="destination-grid">
+            <!-- Lưới hiển thị các điểm đến -->
+            <div class="destination-card">
+                <!-- Card điểm đến đầu tiên -->
+                <img src="images.html/vinhhalong.jpg" alt="Hạ Long Bay">
+                <!-- Hình ảnh vịnh Hạ Long -->
+                <div class="card-content">
+                    <h3>Vịnh Hạ Long</h3>
+                    <!-- Tên điểm đến -->
+                    <p>Di sản thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi</p>
+                    <!-- Mô tả điểm đến -->
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <!-- Card điểm đến thứ hai -->
+                <img src="images.html/sapa.jpg" alt="Sapa">
+                <!-- Hình ảnh Sapa -->
+                <div class="card-content">
+                    <h3>Sapa</h3>
+                    <!-- Tên điểm đến -->
+                    <p>Thị trấn mù sương với những cánh đồng lúa bậc thang tuyệt đẹp</p>
+                    <!-- Mô tả điểm đến -->
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <!-- Card điểm đến thứ ba -->
+                <img src="images.html/hcm.jpg" alt="Ho Chi Minh City">
+                <!-- Hình ảnh TP.HCM -->
+                <div class="card-content">
+                    <h3>TP. Hồ Chí Minh</h3>
+                    <!-- Tên điểm đến -->
+                    <p>Thành phố sôi động với kiến trúc Pháp và văn hóa hiện đại</p>
+                    <!-- Mô tả điểm đến -->
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <!-- Card điểm đến thứ tư -->
+                <img src="images.html/phocohoian.jpg" alt="Hoi An">
+                <!-- Hình ảnh Hội An -->
+                <div class="card-content">
+                    <h3>Phố Cổ Hội An</h3>
+                    <!-- Tên điểm đến -->
+                    <p>Di sản văn hóa thế giới với kiến trúc cổ xưa và đèn lồng lung linh</p>
+                    <!-- Mô tả điểm đến -->
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <!-- Card điểm đến thứ năm -->
+                <img src="images.html/phuquoc.jpg" alt="Phu Quoc">
+                <!-- Hình ảnh Phú Quốc -->
+                <div class="card-content">
+                    <h3>Đảo Phú Quốc</h3>
+                    <!-- Tên điểm đến -->
+                    <p>Hòn đảo xinh đẹp với những bãi biển cát trắng và hải sản tươi ngon</p>
+                    <!-- Mô tả điểm đến -->
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <!-- Card điểm đến thứ sáu -->
+                <img src="images.html/codohue.jpg" alt="Hue">
+                <!-- Hình ảnh Huế -->
+                <div class="card-content">
+                    <h3>Cố Đô Huế</h3>
+                    <!-- Tên điểm đến -->
+                    <p>Thành phố với những lăng tẩm nhà Nguyễn và cầu Tràng Tiền thơ mộng</p>
+                    <!-- Mô tả điểm đến -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features" style="padding: 5rem 0; background: white; text-align: center;">
+        <div class="container">
+            <h2 style="margin-bottom: 3rem; font-family: Montserrat;">Tại Sao Chọn Chúng Tôi?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div class="feature-item">
+                    <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">🌟</div>
+                    <h3>Dịch Vụ Tận Tâm</h3>
+                    <p>Đội ngũ hỗ trợ 24/7 luôn sẵn sàng giúp đỡ bạn trong suốt chuyến đi.</p>
+                </div>
+                <div class="feature-item">
+                    <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">💰</div>
+                    <h3>Giá Cả Hợp Lý</h3>
+                    <p>Cam kết mức giá cạnh tranh nhất với nhiều ưu đãi hấp dẫn hàng tháng.</p>
+                </div>
+                <div class="feature-item">
+                    <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">🛡️</div>
+                    <h3>An Toàn Tuyệt Đối</h3>
+                    <p>Mọi tour du lịch đều được mua bảo hiểm và đảm bảo tiêu chuẩn an toàn cao nhất.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button id="backToTop" title="Lên đầu trang">↑</button>
+
+    <!-- Phần footer -->
+    <footer>
+        <p>&copy; 2026 Website Du Lịch Việt Nam. Thiết kế do học sinh cấp 3.</p>
+        <!-- Thông tin bản quyền -->
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Liên kết đến file JavaScript -->
+</body>
+
+</html>
